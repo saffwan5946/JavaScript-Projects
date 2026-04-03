@@ -1,203 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Quiz App</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Java Script<span> Projects</span></a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://protfolio-saffwan-shafqat.netlify.app/">Portfiolo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/saffwan5946">Github</a></li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="nav-link nav-cta" href="https://www.linkedin.com/in/saffwan-ch-4b75b3373/">Linkdin</a>
-                    </li>
-                </ul>
-            </div>
+
+<div class="container">
+
+    <!-- RESULT -->
+    <div class="result d-none">
+        <p>Your Score</p>
+        <h1><span>0%</span></h1>
+    </div>
+
+    <form class="quiz-form">
+
+        <div class="header">
+            <h2>JavaScript Quiz</h2>
+            <p>Test your fundamentals</p>
         </div>
-    </nav>
-    <section class="hero" id="home">
-        <div class="hero-grid-bg"></div>
-        <div class="hero-glow"></div>
-        <div class="hero-glow2"></div>
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 hero-content">
-                    <div class="hero-eyebrow">
-                        <i class="bi bi-lightning-charge-fill"></i>
-                        Available for Work
-                    </div>
-                    <h1>Myy<br /><em>Java Script</em><br /> Projects</h1>
-                    <p>I craft elegant digital experiences — from pixel-perfect interfaces to robust back-end systems.
-                        Turning ideas into reality, one project at a time.</p>
-                    <div class="hero-btns">
-                        <a href="#projects" class="btn-hero-primary">
-                            <i class="bi bi-grid-3x3-gap"></i> View Projects
-                        </a>
-                        <a href="https://protfolio-saffwan-shafqat.netlify.app/" class="btn-hero-outline">
-                            <i class="bi bi-chat-dots"></i> View Portfiolo
-                        </a>
-                    </div>
-                </div>
-    </section>
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="row mb-4 align-items-end">
-                <div class="col-md-7">
-                    <p class="section-label">My Work</p>
-                    <h2 class="section-title">Java Script Projects</h2>
-                </div>
-                <div class="col-md-5 text-md-end mt-3 mt-md-0">
-                    <a href="#" class="text-decoration-none"
-                        style="color:var(--accent); font-size:0.9rem; font-weight:600;">
-                        All Projects <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
 
+        <!-- Question -->
+        <div class="question">
+            <h4>1. Which keyword declares variable?</h4>
 
-            <div class="container my-5">
-                <div class="row g-4">
-
-                    <!-- Project 1 -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card project-card h-100 border-0 shadow-sm">
-
-                            <img src="./Images/hq720.jpg" class="card-img-top" alt="Project">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h5 class="fw-bold">Todo App</h5>
-
-                                <p class="text-muted">
-                                    JavaScript Todo App with CRUD functionality to manage daily tasks.
-                                </p>
-
-                                <div class="mb-3">
-                                    <span class="badge bg-dark">HTML</span>
-                                    <span class="badge bg-dark">CSS</span>
-                                    <span class="badge bg-dark">JavaScript</span>
-                                </div>
-
-                                <div class="mt-auto d-flex gap-2">
-                                    <a href="https://github.com/saffwan5946/JavaScript-Projects/tree/main/Project-01-Todo-App" class="btn btn-dark btn-sm">
-                                        <i class="bi bi-github"></i> Code
-                                    </a>
-
-                                    <a href="https://saffwan5946.github.io/JavaScript-Projects/Project-01-Todo-App" class="btn btn-primary btn-sm">
-                                        <i class="bi bi-box-arrow-up-right"></i> Live
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Project 2 -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card project-card h-100 border-0 shadow-sm">
-
-                            <img src="./Images/digital-stopwatch.png" class="card-img-top" alt="Project">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h5 class="fw-bold">Digital Stop Watch</h5>
-
-                                <p class="text-muted">
-                                    A Digital Stopwatch developed using JavaScript to practice timing logic and DOM manipulation.
-                                </p>
-
-                                <div class="mb-3">
-                                    <span class="badge bg-dark">HTML</span>
-                                    <span class="badge bg-dark">CSS</span>
-                                    <span class="badge bg-dark">JavaScript</span>
-                                </div>
-
-                                <div class="mt-auto d-flex gap-2">
-                                    <a href="https://github.com/saffwan5946/JavaScript-Projects/tree/main/Project-02-stop-Watch" class="btn btn-dark btn-sm">
-                                        <i class="bi bi-github"></i> Code
-                                    </a>
-
-                                    <a href="https://saffwan5946.github.io/JavaScript-Projects/Project-02-stop-Watch" class="btn btn-primary btn-sm">
-                                        <i class="bi bi-box-arrow-up-right"></i> Live
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Project 3 -->
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card project-card h-100 border-0 shadow-sm">
-
-                            <img src="./Images/quiz-app-project.jpg" class="card-img-top" alt="Project">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h5 class="fw-bold">Quiz App</h5>
-
-                                <p class="text-muted">
-                                    Interactive JavaScript quiz application with score tracking.
-                                </p>
-
-                                <div class="mb-3">
-                                    <span class="badge bg-dark">HTML</span>
-                                    <span class="badge bg-dark">CSS</span>
-                                    <span class="badge bg-dark">JavaScript</span>
-                                </div>
-
-                                <div class="mt-auto d-flex gap-2">
-                                    <a href="https://github.com/saffwan5946/JavaScript-Projects/tree/main/Project-03-Quiz-App" class="btn btn-dark btn-sm">
-                                        <i class="bi bi-github"></i> Code
-                                    </a>
-
-                                    <a href="https://saffwan5946.github.io/JavaScript-Projects/Project-03-Quiz-App" class="btn btn-primary btn-sm">
-                                        <i class="bi bi-box-arrow-up-right"></i> Live
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
+            <label><input type="radio" name="q1" value="a"> function</label>
+            <label><input type="radio" name="q1" value="b"> class</label>
+            <label><input type="radio" name="q1" value="c"> let</label>
+            <label><input type="radio" name="q1" value="d"> switch</label>
         </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-                <span class="footer-text">© 2025 Portfolio. Designed & Built with ♥</span>
-                <div class="social-links">
-                    <a href="https://github.com/saffwan5946" class="social-link"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/saffwan-ch-4b75b3373/" class="social-link"><i
-                            class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                </div>
-            </div>
+
+        <div class="question">
+            <h4>2. Convert JSON to Object?</h4>
+
+            <label><input type="radio" name="q2" value="a"> JSON.parse()</label>
+            <label><input type="radio" name="q2" value="b"> JSON.stringify()</label>
+            <label><input type="radio" name="q2" value="c"> parseInt()</label>
+            <label><input type="radio" name="q2" value="d"> Object()</label>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <div class="question">
+            <h4>3. JavaScript is?</h4>
+
+            <label><input type="radio" name="q3" value="a"> Programming Language</label>
+            <label><input type="radio" name="q3" value="b"> Database</label>
+            <label><input type="radio" name="q3" value="c"> Browser</label>
+            <label><input type="radio" name="q3" value="d"> Server</label>
+        </div>
+
+        <div class="question">
+            <h4>4. DOM stands for?</h4>
+
+            <label><input type="radio" name="q4" value="a"> Document Object Model</label>
+            <label><input type="radio" name="q4" value="b"> Data Model</label>
+            <label><input type="radio" name="q4" value="c"> Design Model</label>
+            <label><input type="radio" name="q4" value="d"> None</label>
+        </div>
+
+        <button class="submit-btn">Submit Quiz</button>
+
+    </form>
+
+</div>
+
+<script src="app.js"></script>
+
 </body>
-
 </html>

@@ -1,0 +1,168 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+height:100vh;
+background:#0b0e16;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+}
+
+/* BACKGROUND GLOW */
+
+.bg-blur{
+position:absolute;
+width:600px;
+height:600px;
+background:linear-gradient(45deg,#00f5ff,#8b5cf6);
+filter:blur(200px);
+opacity:.4;
+}
+
+/* APP */
+
+.app{
+width:520px;
+z-index:2;
+}
+
+/* LOGO */
+
+.logo{
+text-align:center;
+font-size:32px;
+margin-bottom:25px;
+background:linear-gradient(90deg,#00f5ff,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* SEARCH */
+
+.search-area{
+display:flex;
+gap:12px;
+margin-bottom:15px;
+}
+
+input{
+flex:1;
+padding:15px;
+background:#141826;
+border:none;
+border-radius:12px;
+color:white;
+font-size:15px;
+outline:none;
+box-shadow:0 0 0 transparent;
+transition:.3s;
+}
+
+input:focus{
+box-shadow:0 0 15px #00f5ff50;
+}
+
+button{
+padding:15px 22px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#00f5ff,#8b5cf6);
+color:white;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px #8b5cf680;
+}
+
+/* PROFILE CARD */
+
+.profile-card{
+display:none;
+margin-top:20px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+animation:fade .6s ease;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.profile-header{
+display:flex;
+gap:18px;
+align-items:center;
+margin-bottom:20px;
+}
+
+.profile-header img{
+width:90px;
+height:90px;
+border-radius:50%;
+border:3px solid #8b5cf6;
+}
+
+.profile-header p{
+color:#b5b5b5;
+margin-top:5px;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:space-between;
+margin:20px 0;
+}
+
+.stats div{
+background:#111522;
+padding:15px;
+border-radius:14px;
+width:32%;
+text-align:center;
+transition:.3s;
+}
+
+.stats div:hover{
+transform:translateY(-5px);
+background:#171c2b;
+}
+
+.stats h3{
+color:#00f5ff;
+font-size:22px;
+}
+
+/* LINK */
+
+#profileLink{
+display:block;
+text-align:center;
+padding:14px;
+border-radius:12px;
+text-decoration:none;
+background:linear-gradient(90deg,#00f5ff,#8b5cf6);
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+#profileLink:hover{
+box-shadow:0 10px 30px #8b5cf680;
+}

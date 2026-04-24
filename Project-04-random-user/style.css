@@ -2,167 +2,140 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
 height:100vh;
-background:#0b0e16;
 display:flex;
 justify-content:center;
 align-items:center;
-color:white;
 overflow:hidden;
+background:#0f172a;
+color:white;
 }
 
-/* BACKGROUND GLOW */
+/* Animated Background */
 
-.bg-blur{
+.bg-animation{
 position:absolute;
-width:600px;
-height:600px;
-background:linear-gradient(45deg,#00f5ff,#8b5cf6);
-filter:blur(200px);
-opacity:.4;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle at 20% 30%,#2563eb44,transparent),
+radial-gradient(circle at 80% 70%,#9333ea44,transparent),
+radial-gradient(circle at 50% 50%,#06b6d444,transparent);
+animation:moveBg 12s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-10%,-10%);}
+100%{transform:translate(0,0);}
 }
 
 /* APP */
 
 .app{
-width:520px;
-z-index:2;
-}
-
-/* LOGO */
-
-.logo{
 text-align:center;
-font-size:32px;
-margin-bottom:25px;
-background:linear-gradient(90deg,#00f5ff,#8b5cf6);
--webkit-background-clip:text;
-color:transparent;
 }
 
-/* SEARCH */
+h1{
+margin-bottom:30px;
+font-weight:600;
+letter-spacing:1px;
+}
 
-.search-area{
+/* CARD */
+
+.card{
+width:360px;
+padding:35px;
+border-radius:22px;
+
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.5);
+
+transition:.4s;
+animation:fadeIn .6s ease;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+}
+
+/* IMAGE */
+
+.img-wrapper{
 display:flex;
-gap:12px;
+justify-content:center;
 margin-bottom:15px;
 }
 
-input{
-flex:1;
-padding:15px;
-background:#141826;
-border:none;
-border-radius:12px;
-color:white;
-font-size:15px;
-outline:none;
-box-shadow:0 0 0 transparent;
-transition:.3s;
+#userImg{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid rgba(255,255,255,.3);
+transition:.5s;
 }
 
-input:focus{
-box-shadow:0 0 15px #00f5ff50;
+/* DETAILS */
+
+.details p{
+margin:8px 0;
+opacity:.9;
+font-size:15px;
 }
+
+/* STATUS */
+
+.status{
+margin-top:12px;
+font-size:14px;
+color:#22d3ee;
+}
+
+/* BUTTON */
 
 button{
-padding:15px 22px;
+margin-top:22px;
+padding:13px 26px;
 border:none;
-border-radius:12px;
-background:linear-gradient(90deg,#00f5ff,#8b5cf6);
+border-radius:40px;
+
+background:linear-gradient(45deg,#06b6d4,#6366f1);
+
 color:white;
+font-size:16px;
 cursor:pointer;
-font-weight:600;
 transition:.3s;
 }
 
 button:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 25px #8b5cf680;
+transform:scale(1.07);
+box-shadow:0 0 15px #06b6d4;
 }
 
-/* PROFILE CARD */
-
-.profile-card{
-display:none;
-margin-top:20px;
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,0.1);
-animation:fade .6s ease;
+button:disabled{
+opacity:.6;
+cursor:not-allowed;
 }
 
-@keyframes fade{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
+/* CARD LOAD ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
 }
-
-.profile-header{
-display:flex;
-gap:18px;
-align-items:center;
-margin-bottom:20px;
+to{
+opacity:1;
+transform:translateY(0);
 }
-
-.profile-header img{
-width:90px;
-height:90px;
-border-radius:50%;
-border:3px solid #8b5cf6;
-}
-
-.profile-header p{
-color:#b5b5b5;
-margin-top:5px;
-}
-
-/* STATS */
-
-.stats{
-display:flex;
-justify-content:space-between;
-margin:20px 0;
-}
-
-.stats div{
-background:#111522;
-padding:15px;
-border-radius:14px;
-width:32%;
-text-align:center;
-transition:.3s;
-}
-
-.stats div:hover{
-transform:translateY(-5px);
-background:#171c2b;
-}
-
-.stats h3{
-color:#00f5ff;
-font-size:22px;
-}
-
-/* LINK */
-
-#profileLink{
-display:block;
-text-align:center;
-padding:14px;
-border-radius:12px;
-text-decoration:none;
-background:linear-gradient(90deg,#00f5ff,#8b5cf6);
-color:white;
-font-weight:600;
-transition:.3s;
-}
-
-#profileLink:hover{
-box-shadow:0 10px 30px #8b5cf680;
 }
